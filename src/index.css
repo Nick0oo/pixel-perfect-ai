@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -149,12 +150,43 @@
     @apply w-8 h-px bg-primary;
   }
 
+  .section-label-white {
+    @apply text-sm font-medium text-white tracking-wider uppercase flex items-center gap-2 justify-center;
+  }
+
+  .section-label-white::before {
+    content: '';
+    @apply w-8 h-px bg-white;
+  }
+
   .service-card {
     @apply bg-card p-6 rounded-lg text-center hover:bg-secondary transition-all duration-300;
   }
 
   .service-icon {
     @apply w-16 h-16 mx-auto mb-4 bg-primary/20 rounded-lg flex items-center justify-center text-primary;
+  }
+
+  .services-section-bg {
+    @apply relative w-full;
+    background-color: #2F1B4E;
+  }
+
+  .service-card-new {
+    @apply p-8 rounded-lg text-center;
+    background-color: #3B1F60;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-icon-circle {
+    @apply w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center;
+    background-color: #FFFFFF;
+  }
+
+  .service-icon-circle svg {
+    color: #2B1B44;
   }
 
   .pricing-card {
@@ -171,16 +203,5 @@
 
   .company-logo {
     @apply text-muted-foreground hover:text-foreground transition-colors duration-300 text-xl font-bold;
-  }
-}
-
-
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
   }
 }
