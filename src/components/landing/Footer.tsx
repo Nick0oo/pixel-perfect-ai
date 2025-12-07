@@ -2,9 +2,30 @@ import { Facebook, Instagram, Twitter } from "lucide-react";
 
 const Footer = () => {
   const menuLinks = [
-    { title: "MENU", links: ["Services", "How It Work", "Feature"] },
-    { title: "PRICING", links: ["Packages", "Business", "Get App"] },
-    { title: "SUPPORT", links: ["Support Center", "Privacy Policy", "Contact Us"] },
+    { 
+      title: "MENU", 
+      links: [
+        { name: "Home", href: "#" },
+        { name: "About", href: "#about" },
+        { name: "Services", href: "#services" }
+      ] 
+    },
+    { 
+      title: "PRICING", 
+      links: [
+        { name: "Pricing Plans", href: "#pricing" },
+        { name: "Get Started", href: "#" },
+        { name: "Contact Us", href: "#contact" }
+      ] 
+    },
+    { 
+      title: "SUPPORT", 
+      links: [
+        { name: "Contact Us", href: "#contact" },
+        { name: "Privacy Policy", href: "#" },
+        { name: "Terms of Service", href: "#" }
+      ] 
+    },
   ];
 
   return (
@@ -41,10 +62,10 @@ const Footer = () => {
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <a
-                      href="#"
+                      href={link.href}
                       className="text-muted-foreground hover:text-primary transition-colors text-sm"
                     >
-                      {link}
+                      {link.name}
                     </a>
                   </li>
                 ))}
